@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+//programa para hallar la suma de los numeros naturales del 1 al n
+
+int main (void)
+{
+    int n=0;
+    int suma=0;
+
+    printf ("Ingrese el valor de n: \n");
+    scanf ("%d", &n);
+    printf ("La suma de los numeros naturales es: \n");
+
+    for (int i=1; i<=n; i++)
+    {
+        suma=suma+i;
+         printf ("%d \n", suma);
+         
+    }
+
+    return (0);
+}
