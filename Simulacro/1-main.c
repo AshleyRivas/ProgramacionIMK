@@ -1,30 +1,23 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 
-int main() {
-    float millas=0;
-	float galones= 1;
-	float Total_de_Galones= 0;
-	float Total_de_Millas= 0;
+int main(){
+int litros_gasolina = 0;
+int millas = 0;
+float galon = 1;
+float final = 0;
+do{
+printf("ingresa los litro de gasolina usados\n");
+scanf("%d",&litros_gasolina);
 
-	printf("Ingresa los litros de gasolina que consumiste: ");
-	scanf("%f",&galones);
+printf("ingresa las millas recorridas\n");
+scanf("%d",&millas);
 
-	while (galones != -1) {
-		printf("Ingresa las millas que recorriste: ");
-		scanf("%f", &millas);
+galon = litros_gasolina * .264179;
+final = millas / galon;
 
-		if (galones != 0) {
-			printf("El numero de millas/galon que consume el automovil es: %.4f\n", millas / galones);
-			Total_de_Galones += galones;
-			Total_de_Millas += millas;
-		}
-
-		printf("Ingrese los galones sonsumidos: ");
-		scanf("%f", &galones);
-	}
-
-	printf("El numero de millas/galon que consume el automovil es:  %.4f\n", Total_de_Millas / Total_de_Galones);
-	system("pause");
-	return 1;
+printf("el carro da %f galones por %d millares recorridas\n", galon, millas);
+printf("da un rendimiento de %f galones por milla\n", final);
+printf("para terminar el programa ingrese ceros\n");
+}
+while(litros_gasolina != 0 && millas != 0);
 }
